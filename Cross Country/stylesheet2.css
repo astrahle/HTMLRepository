@@ -1,0 +1,102 @@
+body{
+    background-color: #6666FF;
+}
+
+#banner{
+    
+    padding-top: 40px;
+    padding-bottom: 40px;
+
+    text-indent: 30px;
+    font-size: 160%;
+    font-family: monospace;
+    font-weight: bolder;
+}
+
+#tables{
+    background-color: #dddddd;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+h1{
+    font-family: Bauhaus 93;
+}
+IMG.bannerImg{
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	
+}
+
+#tableOne{
+	text-align:center;
+	background-color: #dddddd;
+	border-width: thin;
+    border-style: solid;
+    border-color: #007e7e;
+    margin-left: 20px;
+    margin-right: 20px;
+    padding-bottom: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+
+}
+
+#tableTwo{
+	text-align: center;
+	background-color: #dddddd;
+	border-width: thin;
+    border-style: solid;
+    border-color: #007e7e;
+    margin-left: 20px;
+    margin-right: 20px;
+    padding-bottom: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+
+}
+
+td{
+	background-color:white;
+}
+
+#Statistics tr{
+    height: 22px;
+}
+
+.Button{
+    background-color: #6666FF;
+    color: white;
+}
+
+.Button:hover{
+    background:#dddddd;
+    color: #6666FF;
+}
+
+.tableTitle{
+    background-color: #6666FF;
+    color: white;
+}
+
+.banner2{
+    text-align: center;
+    background-color: #dddddd;
+    border-width: thin;
+    border-style: dashed;
+    border-color: #007e7e;
+    margin-left: 20px;
+    margin-right: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    font-size: 150%;
+}
+
+#Statistics{
+    text-align: center;
+}
+
+

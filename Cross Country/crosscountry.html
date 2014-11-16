@@ -1,0 +1,608 @@
+<html>
+
+<head>
+    <title>Cross Country</title>
+    <link type="text/css" rel="stylesheet" href="stylesheet2.css" />
+
+    <script>
+    var runnerOneBackup = [];
+    var runnerTwoBackup = [];
+    var runnerThreeBackup = [];
+    var runnerFourBackup = [];
+    var runnerFiveBackup = [];
+
+    function updateOne() {
+        var firstName = document.getElementById('firstNameOne').value;
+        var lastName = document.getElementById('lastNameOne').value;
+        var timeOne = document.getElementById('mileOneOne').value;
+        var timeTwo = document.getElementById('mileTwoOne').value;
+        var timeThree = document.getElementById('totalTimeOne').value;
+
+        runnerOneBackup[0] = firstName;
+        runnerOneBackup[1] = lastName;
+        runnerOneBackup[2] = timeOne;
+        runnerOneBackup[3] = timeTwo;
+        runnerOneBackup[4] = timeThree;
+
+        var timeOneIndex = timeOne.indexOf(":");
+        var timeOneMinutes = timeOne.substring(0,timeOneIndex);
+        var timeOneMinutesInt = parseInt(timeOneMinutes);
+        var timeOneMinutesToSeconds = timeOneMinutesInt * 60;
+        var timeOneSeconds = timeOne.substring(timeOneIndex+1);
+        var timeOneSecondstoInt = parseInt(timeOneSeconds);
+        var minutesOne = (timeOneMinutesToSeconds + timeOneSecondstoInt)/60;
+
+        var timeTwoIndex = timeTwo.indexOf(":");
+        var timeTwoMinutes = timeTwo.substring(0,timeTwoIndex);
+        var timeTwoMinutesInt = parseInt(timeTwoMinutes);
+        var timeTwoMinutesToSeconds = timeTwoMinutesInt * 60;
+        var timeTwoSeconds = timeTwo.substring(timeTwoIndex+1);
+        var timeTwoSecondstoInt = parseInt(timeTwoSeconds);
+        var minutesTwo = (timeTwoMinutesToSeconds + timeTwoSecondstoInt)/60;
+
+        var timeThreeIndex = timeThree.indexOf(":");
+        var timeThreeMinutes = timeThree.substring(0,timeThreeIndex);
+        var timeThreeMinutesInt = parseInt(timeThreeMinutes);
+        var timeThreeMinutesToSeconds = timeThreeMinutesInt * 60;
+        var timeThreeSeconds = timeThree.substring(timeThreeIndex+1);
+        var timeThreeSecondstoInt = parseInt(timeThreeSeconds);
+        var minutesThree = (timeThreeMinutesToSeconds + timeThreeSecondstoInt)/60;
+
+       	var splitOne = minutesTwo - minutesOne;
+       	var splitTwo = minutesThree - minutesTwo;
+       	var splitOneFormatted = parseFloat(Math.round(splitOne * 100) / 100).toFixed(2);
+       	var splitTwoFormatted = parseFloat(Math.round(splitTwo * 100) / 100).toFixed(2);
+
+        document.getElementById('statFirstNameOne').innerHTML = firstName;
+        document.getElementById('statLastNameOne').innerHTML = lastName;
+        document.getElementById('statMileOneOne').innerHTML = splitOneFormatted;
+        document.getElementById('statMileTwoOne').innerHTML = splitTwoFormatted;
+        document.getElementById('statTotalTimeOne').innerHTML = timeThree;
+    }
+
+    function updateTwo() {
+        var firstName = document.getElementById('firstNameTwo').value;
+        var lastName = document.getElementById('lastNameTwo').value;
+        var timeOne = document.getElementById('mileOneTwo').value;
+        var timeTwo = document.getElementById('mileTwoTwo').value;
+        var timeThree = document.getElementById('totalTimeTwo').value;
+
+        runnerTwoBackup[0] = firstName;
+        runnerTwoBackup[1] = lastName;
+        runnerTwoBackup[2] = timeOne;
+        runnerTwoBackup[3] = timeTwo;
+        runnerTwoBackup[4] = timeThree;
+
+        var timeOneIndex = timeOne.indexOf(":");
+        var timeOneMinutes = timeOne.substring(0,timeOneIndex);
+        var timeOneMinutesInt = parseInt(timeOneMinutes);
+        var timeOneMinutesToSeconds = timeOneMinutesInt * 60;
+        var timeOneSeconds = timeOne.substring(timeOneIndex+1);
+        var timeOneSecondstoInt = parseInt(timeOneSeconds);
+        var minutesOne = (timeOneMinutesToSeconds + timeOneSecondstoInt)/60;
+
+        var timeTwoIndex = timeTwo.indexOf(":");
+        var timeTwoMinutes = timeTwo.substring(0,timeTwoIndex);
+        var timeTwoMinutesInt = parseInt(timeTwoMinutes);
+        var timeTwoMinutesToSeconds = timeTwoMinutesInt * 60;
+        var timeTwoSeconds = timeTwo.substring(timeTwoIndex+1);
+        var timeTwoSecondstoInt = parseInt(timeTwoSeconds);
+        var minutesTwo = (timeTwoMinutesToSeconds + timeTwoSecondstoInt)/60;
+
+        var timeThreeIndex = timeThree.indexOf(":");
+        var timeThreeMinutes = timeThree.substring(0,timeThreeIndex);
+        var timeThreeMinutesInt = parseInt(timeThreeMinutes);
+        var timeThreeMinutesToSeconds = timeThreeMinutesInt * 60;
+        var timeThreeSeconds = timeThree.substring(timeThreeIndex+1);
+        var timeThreeSecondstoInt = parseInt(timeThreeSeconds);
+        var minutesThree = (timeThreeMinutesToSeconds + timeThreeSecondstoInt)/60;
+
+       	var splitOne = minutesTwo - minutesOne;
+       	var splitTwo = minutesThree - minutesTwo;
+       	var splitOneFormatted = parseFloat(Math.round(splitOne * 100) / 100).toFixed(2);
+       	var splitTwoFormatted = parseFloat(Math.round(splitTwo * 100) / 100).toFixed(2);
+
+        document.getElementById('statFirstNameTwo').innerHTML = firstName;
+        document.getElementById('statLastNameTwo').innerHTML = lastName;
+        document.getElementById('statMileOneTwo').innerHTML = splitOneFormatted;
+        document.getElementById('statMileTwoTwo').innerHTML = splitTwoFormatted;
+        document.getElementById('statTotalTimeTwo').innerHTML = timeThree;
+    }
+
+    function updateThree() {
+        var firstName = document.getElementById('firstNameThree').value;
+        var lastName = document.getElementById('lastNameThree').value;
+        var timeOne = document.getElementById('mileOneThree').value;
+        var timeTwo = document.getElementById('mileTwoThree').value;
+        var timeThree = document.getElementById('totalTimeThree').value;
+
+        runnerThreeBackup[0] = firstName;
+        runnerThreeBackup[1] = lastName;
+        runnerThreeBackup[2] = timeOne;
+        runnerThreeBackup[3] = timeTwo;
+        runnerThreeBackup[4] = timeThree;
+
+        var timeOneIndex = timeOne.indexOf(":");
+        var timeOneMinutes = timeOne.substring(0,timeOneIndex);
+        var timeOneMinutesInt = parseInt(timeOneMinutes);
+        var timeOneMinutesToSeconds = timeOneMinutesInt * 60;
+        var timeOneSeconds = timeOne.substring(timeOneIndex+1);
+        var timeOneSecondstoInt = parseInt(timeOneSeconds);
+        var minutesOne = (timeOneMinutesToSeconds + timeOneSecondstoInt)/60;
+
+        var timeTwoIndex = timeTwo.indexOf(":");
+        var timeTwoMinutes = timeTwo.substring(0,timeTwoIndex);
+        var timeTwoMinutesInt = parseInt(timeTwoMinutes);
+        var timeTwoMinutesToSeconds = timeTwoMinutesInt * 60;
+        var timeTwoSeconds = timeTwo.substring(timeTwoIndex+1);
+        var timeTwoSecondstoInt = parseInt(timeTwoSeconds);
+        var minutesTwo = (timeTwoMinutesToSeconds + timeTwoSecondstoInt)/60;
+
+        var timeThreeIndex = timeThree.indexOf(":");
+        var timeThreeMinutes = timeThree.substring(0,timeThreeIndex);
+        var timeThreeMinutesInt = parseInt(timeThreeMinutes);
+        var timeThreeMinutesToSeconds = timeThreeMinutesInt * 60;
+        var timeThreeSeconds = timeThree.substring(timeThreeIndex+1);
+        var timeThreeSecondstoInt = parseInt(timeThreeSeconds);
+        var minutesThree = (timeThreeMinutesToSeconds + timeThreeSecondstoInt)/60;
+
+       	var splitOne = minutesTwo - minutesOne;
+       	var splitTwo = minutesThree - minutesTwo;
+       	var splitOneFormatted = parseFloat(Math.round(splitOne * 100) / 100).toFixed(2);
+       	var splitTwoFormatted = parseFloat(Math.round(splitTwo * 100) / 100).toFixed(2);
+
+
+        document.getElementById('statFirstNameThree').innerHTML = firstName;
+        document.getElementById('statLastNameThree').innerHTML = lastName;
+        document.getElementById('statMileOneThree').innerHTML = splitOneFormatted;
+        document.getElementById('statMileTwoThree').innerHTML = splitTwoFormatted;
+        document.getElementById('statTotalTimeThree').innerHTML = timeThree;
+    }
+
+    function updateFour() {
+        var firstName = document.getElementById('firstNameFour').value;
+        var lastName = document.getElementById('lastNameFour').value;
+        var timeOne = document.getElementById('mileOneFour').value;
+        var timeTwo = document.getElementById('mileTwoFour').value;
+        var timeThree = document.getElementById('totalTimeFour').value;
+
+        runnerFourBackup[0] = firstName;
+        runnerFourBackup[1] = lastName;
+        runnerFourBackup[2] = timeOne;
+        runnerFourBackup[3] = timeTwo;
+        runnerFourBackup[4] = timeThree;
+
+        var timeOneIndex = timeOne.indexOf(":");
+        var timeOneMinutes = timeOne.substring(0,timeOneIndex);
+        var timeOneMinutesInt = parseInt(timeOneMinutes);
+        var timeOneMinutesToSeconds = timeOneMinutesInt * 60;
+        var timeOneSeconds = timeOne.substring(timeOneIndex+1);
+        var timeOneSecondstoInt = parseInt(timeOneSeconds);
+        var minutesOne = (timeOneMinutesToSeconds + timeOneSecondstoInt)/60;
+
+        var timeTwoIndex = timeTwo.indexOf(":");
+        var timeTwoMinutes = timeTwo.substring(0,timeTwoIndex);
+        var timeTwoMinutesInt = parseInt(timeTwoMinutes);
+        var timeTwoMinutesToSeconds = timeTwoMinutesInt * 60;
+        var timeTwoSeconds = timeTwo.substring(timeTwoIndex+1);
+        var timeTwoSecondstoInt = parseInt(timeTwoSeconds);
+        var minutesTwo = (timeTwoMinutesToSeconds + timeTwoSecondstoInt)/60;
+
+        var timeThreeIndex = timeThree.indexOf(":");
+        var timeThreeMinutes = timeThree.substring(0,timeThreeIndex);
+        var timeThreeMinutesInt = parseInt(timeThreeMinutes);
+        var timeThreeMinutesToSeconds = timeThreeMinutesInt * 60;
+        var timeThreeSeconds = timeThree.substring(timeThreeIndex+1);
+        var timeThreeSecondstoInt = parseInt(timeThreeSeconds);
+        var minutesThree = (timeThreeMinutesToSeconds + timeThreeSecondstoInt)/60;
+
+       	var splitOne = minutesTwo - minutesOne;
+       	var splitTwo = minutesThree - minutesTwo;
+       	var splitOneFormatted = parseFloat(Math.round(splitOne * 100) / 100).toFixed(2);
+       	var splitTwoFormatted = parseFloat(Math.round(splitTwo * 100) / 100).toFixed(2);
+
+        document.getElementById('statFirstNameFour').innerHTML = firstName;
+        document.getElementById('statLastNameFour').innerHTML = lastName;
+        document.getElementById('statMileOneFour').innerHTML = splitOneFormatted;
+        document.getElementById('statMileTwoFour').innerHTML = splitTwoFormatted;
+        document.getElementById('statTotalTimeFour').innerHTML = timeThree;
+    }
+
+    function updateFive() {
+        var firstName = document.getElementById('firstNameFive').value;
+        var lastName = document.getElementById('lastNameFive').value;
+        var timeOne = document.getElementById('mileOneFive').value;
+        var timeTwo = document.getElementById('mileTwoFive').value;
+        var timeThree = document.getElementById('totalTimeFive').value;
+
+        runnerFiveBackup[0] = firstName;
+        runnerFiveBackup[1] = lastName;
+        runnerFiveBackup[2] = timeOne;
+        runnerFiveBackup[3] = timeTwo;
+        runnerFiveBackup[4] = timeThree;
+
+        var timeOneIndex = timeOne.indexOf(":");
+        var timeOneMinutes = timeOne.substring(0,timeOneIndex);
+        var timeOneMinutesInt = parseInt(timeOneMinutes);
+        var timeOneMinutesToSeconds = timeOneMinutesInt * 60;
+        var timeOneSeconds = timeOne.substring(timeOneIndex+1);
+        var timeOneSecondstoInt = parseInt(timeOneSeconds);
+        var minutesOne = (timeOneMinutesToSeconds + timeOneSecondstoInt)/60;
+
+        var timeTwoIndex = timeTwo.indexOf(":");
+        var timeTwoMinutes = timeTwo.substring(0,timeTwoIndex);
+        var timeTwoMinutesInt = parseInt(timeTwoMinutes);
+        var timeTwoMinutesToSeconds = timeTwoMinutesInt * 60;
+        var timeTwoSeconds = timeTwo.substring(timeTwoIndex+1);
+        var timeTwoSecondstoInt = parseInt(timeTwoSeconds);
+        var minutesTwo = (timeTwoMinutesToSeconds + timeTwoSecondstoInt)/60;
+
+        var timeThreeIndex = timeThree.indexOf(":");
+        var timeThreeMinutes = timeThree.substring(0,timeThreeIndex);
+        var timeThreeMinutesInt = parseInt(timeThreeMinutes);
+        var timeThreeMinutesToSeconds = timeThreeMinutesInt * 60;
+        var timeThreeSeconds = timeThree.substring(timeThreeIndex+1);
+        var timeThreeSecondstoInt = parseInt(timeThreeSeconds);
+        var minutesThree = (timeThreeMinutesToSeconds + timeThreeSecondstoInt)/60;
+
+       	var splitOne = minutesTwo - minutesOne;
+       	var splitTwo = minutesThree - minutesTwo;
+       	var splitOneFormatted = parseFloat(Math.round(splitOne * 100) / 100).toFixed(2);
+       	var splitTwoFormatted = parseFloat(Math.round(splitTwo * 100) / 100).toFixed(2);
+
+        document.getElementById('statFirstNameFive').innerHTML = firstName;
+        document.getElementById('statLastNameFive').innerHTML = lastName;
+        document.getElementById('statMileOneFive').innerHTML = splitOneFormatted;
+        document.getElementById('statMileTwoFive').innerHTML = splitTwoFormatted;
+        document.getElementById('statTotalTimeFive').innerHTML = timeThree;
+    }
+
+    function deleteOne() {
+        var firstName = '';
+        var lastName = '';
+        var timeOne = '';
+        var timeTwo = '';
+        var totalTime = '';
+
+        document.getElementById('firstNameOne').value = firstName;
+        document.getElementById('lastNameOne').value = lastName;
+        document.getElementById('mileOneOne').value = lastName;
+        document.getElementById('mileTwoOne').value = lastName;
+        document.getElementById('totalTimeOne').value = lastName;
+
+        document.getElementById('statFirstNameOne').innerHTML = firstName;
+        document.getElementById('statLastNameOne').innerHTML = lastName;
+        document.getElementById('statMileOneOne').innerHTML = lastName;
+        document.getElementById('statMileTwoOne').innerHTML = lastName;
+        document.getElementById('statTotalTimeOne').innerHTML = lastName;
+    }
+
+    function deleteTwo() {
+        var firstName = '';
+        var lastName = '';
+        var timeOne = '';
+        var timeTwo = '';
+        var totalTime = '';
+
+        document.getElementById('firstNameTwo').value = firstName;
+        document.getElementById('lastNameTwo').value = lastName;
+        document.getElementById('mileOneTwo').value = lastName;
+        document.getElementById('mileTwoTwo').value = lastName;
+        document.getElementById('totalTimeTwo').value = lastName;
+
+        document.getElementById('statFirstNameTwo').innerHTML = firstName;
+        document.getElementById('statLastNameTwo').innerHTML = lastName;
+        document.getElementById('statMileOneTwo').innerHTML = lastName;
+        document.getElementById('statMileTwoTwo').innerHTML = lastName;
+        document.getElementById('statTotalTimeTwo').innerHTML = lastName;
+    }
+
+    function deleteThree() {
+        var firstName = '';
+        var lastName = '';
+        var timeOne = '';
+        var timeTwo = '';
+        var totalTime = '';
+
+        document.getElementById('firstNameThree').value = firstName;
+        document.getElementById('lastNameThree').value = lastName;
+        document.getElementById('mileOneThree').value = lastName;
+        document.getElementById('mileTwoThree').value = lastName;
+        document.getElementById('totalTimeThree').value = lastName;
+
+        document.getElementById('statFirstNameThree').innerHTML = firstName;
+        document.getElementById('statLastNameThree').innerHTML = lastName;
+        document.getElementById('statMileOneThree').innerHTML = lastName;
+        document.getElementById('statMileTwoThree').innerHTML = lastName;
+        document.getElementById('statTotalTimeThree').innerHTML = lastName;
+    }
+
+    function deleteFour() {
+        var firstName = '';
+        var lastName = '';
+        var timeOne = '';
+        var timeTwo = '';
+        var totalTime = '';
+
+        document.getElementById('firstNameFour').value = firstName;
+        document.getElementById('lastNameFour').value = lastName;
+        document.getElementById('mileOneFour').value = lastName;
+        document.getElementById('mileTwoFour').value = lastName;
+        document.getElementById('totalTimeFour').value = lastName;
+
+        document.getElementById('statFirstNameFour').innerHTML = firstName;
+        document.getElementById('statLastNameFour').innerHTML = lastName;
+        document.getElementById('statMileOneFour').innerHTML = lastName;
+        document.getElementById('statMileTwoFour').innerHTML = lastName;
+        document.getElementById('statTotalTimeFour').innerHTML = lastName;
+    }
+
+    function deleteFive() {
+        var firstName = '';
+        var lastName = '';
+        var timeOne = '';
+        var timeTwo = '';
+        var totalTime = '';
+
+        document.getElementById('firstNameFive').value = firstName;
+        document.getElementById('lastNameFive').value = lastName;
+        document.getElementById('mileOneFive').value = lastName;
+        document.getElementById('mileTwoFive').value = lastName;
+        document.getElementById('totalTimeFive').value = lastName;
+
+        document.getElementById('statFirstNameFive').innerHTML = firstName;
+        document.getElementById('statLastNameFive').innerHTML = lastName;
+        document.getElementById('statMileOneFive').innerHTML = lastName;
+        document.getElementById('statMileTwoFive').innerHTML = lastName;
+        document.getElementById('statTotalTimeFive').innerHTML = lastName;
+    }
+
+    function restoreOne(){
+    	document.getElementById('firstNameOne').value = runnerOneBackup[0];
+    	document.getElementById('lastNameOne').value = runnerOneBackup[1];
+    	document.getElementById('mileOneOne').value = runnerOneBackup[2];
+    	document.getElementById('mileTwoOne').value = runnerOneBackup[3];
+    	document.getElementById('totalTimeOne').value = runnerOneBackup[4];
+    }
+
+    function restoreTwo(){
+    	document.getElementById('firstNameTwo').value = runnerTwoBackup[0];
+    	document.getElementById('lastNameTwo').value = runnerTwoBackup[1];
+    	document.getElementById('mileOneTwo').value = runnerTwoBackup[2];
+    	document.getElementById('mileTwoTwo').value = runnerTwoBackup[3];
+    	document.getElementById('totalTimeTwo').value = runnerTwoBackup[4];
+    }
+
+    function restoreThree(){
+    	document.getElementById('firstNameThree').value = runnerThreeBackup[0];
+    	document.getElementById('lastNameThree').value = runnerThreeBackup[1];
+    	document.getElementById('mileOneThree').value = runnerThreeBackup[2];
+    	document.getElementById('mileTwoThree').value = runnerThreeBackup[3];
+    	document.getElementById('totalTimeThree').value = runnerThreeBackup[4];
+    }
+
+    function restoreFour(){
+    	document.getElementById('firstNameFour').value = runnerFourBackup[0];
+    	document.getElementById('lastNameFour').value = runnerFourBackup[1];
+    	document.getElementById('mileOneFour').value = runnerFourBackup[2];
+    	document.getElementById('mileTwoFour').value = runnerFourBackup[3];
+    	document.getElementById('totalTimeFour').value = runnerFourBackup[4];
+    }
+
+    function restoreFive(){
+    	document.getElementById('firstNameFive').value = runnerFiveBackup[0];
+    	document.getElementById('lastNameFive').value = runnerFiveBackup[1];
+    	document.getElementById('mileOneFive').value = runnerFiveBackup[2];
+    	document.getElementById('mileTwoFive').value = runnerFiveBackup[3];
+    	document.getElementById('totalTimeFive').value = runnerFiveBackup[4];
+    }
+    </script>
+
+</head>
+
+<body>
+
+    <div id="banner">
+        <img class="bannerImg" src="images/Banner4.jpg" alt="Cross Country"/>
+    </div>
+
+    <p>
+    </p>
+    <p class="banner2">
+    Welcome to the cross country calculator. Please enter the times in the (xx:xx) format. For example (12:45), if not the code is programed to return "NaN" representing that you didn't do it right. Enjoy!
+</p>
+<div id="tables">
+    <div id="tableOne">
+
+        <h2>Runner Input</h2>
+
+        <table id='RunnerInput' border="1" style="width:0%">
+            <tr>
+                <th class="tableTitle">First Name</th>
+                <th class="tableTitle">Last Name</th>
+                <th class="tableTitle">Mile One (xx:xx)</th>
+                <th class="tableTitle">Mile Two (xx:xx)</th>
+                <th class="tableTitle">Total Time (xx:xx)</th>
+            </tr>
+
+            <tr>
+                <td>
+                    <input type="text" id="firstNameOne" style="width:100%">
+                </td>
+                <td>
+                    <input type="text" id="lastNameOne" style="width:100%">
+                </td>
+                <td>
+                    <input type="text" id="mileOneOne" style="width:100%">
+                </td>
+                <td>
+                    <input type="text" id="mileTwoOne" style="width:100%">
+                </td>
+                <td>
+                    <input type="text" id="totalTimeOne" style="width:100%">
+                </td>
+                <td>
+                    <input type="button"  class="Button" id="Update1" value="Update" onclick="javascript:updateOne();" />
+                    <input type="button"  class="Button" id="Restore1" value="Restore" onclick="javascript:restoreOne()" ;/>
+                    <input type="button"  class="Button" id="Delete1" value="Delete" onclick="javascript:deleteOne()" ;/>
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <input type="text" id="firstNameTwo" style="width:100%">
+                </td>
+                <td>
+                    <input type="text" id="lastNameTwo" style="width:100%">
+                </td>
+                <td>
+                    <input type="text" id="mileOneTwo" style="width:100%">
+                </td>
+                <td>
+                    <input type="text" id="mileTwoTwo" style="width:100%">
+                </td>
+                <td>
+                    <input type="text" id="totalTimeTwo" style="width:100%">
+                </td>
+                <td>
+                    <input type="button" class ="Button" id="Update2" value="Update" onclick="javascript:updateTwo();" />
+                    <input type="button"  class ="Button" id="Restore2" value="Restore" onclick="javascript:restoreTwo();" />
+                    <input type="button"  class ="Button" id="Delete2" value="Delete" onclick="javascript:deleteTwo();" />
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <input type="text" id="firstNameThree" style="width:100%">
+                </td>
+                <td>
+                    <input type="text" id="lastNameThree" style="width:100%">
+                </td>
+                <td>
+                    <input type="text" id="mileOneThree" style="width:100%">
+                </td>
+                <td>
+                    <input type="text" id="mileTwoThree" style="width:100%">
+                </td>
+                <td>
+                    <input type="text" id="totalTimeThree" style="width:100%">
+                </td>
+                <td>
+                    <input type="button"  class="Button" id="Update3" value="Update" onclick="javascript:updateThree();" />
+                    <input type="button"  class="Button" id="Restore3" value="Restore" onclick="javascript:restoreThree();" />
+                    <input type="button"  class="Button" id="Delete3" value="Delete" onclick="javascript:deleteThree();" />
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <input type="text" id="firstNameFour" style="width:100%">
+                </td>
+                <td>
+                    <input type="text" id="lastNameFour" style="width:100%">
+                </td>
+                <td>
+                    <input type="text" id="mileOneFour" style="width:100%">
+                </td>
+                <td>
+                    <input type="text" id="mileTwoFour" style="width:100%">
+                </td>
+                <td>
+                    <input type="text" id="totalTimeFour" style="width:100%">
+                </td>
+                <td>
+                    <input type="button"  class="Button" id="Update4" value="Update" onclick="javascript:updateFour();" />
+                    <input type="button"  class="Button" id="Restore4" value="Restore" onclick="javascript:restoreFour();" />
+                    <input type="button"  class="Button" id="Delete4" value="Delete" onclick="javascript:deleteFour();" />
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <input type="text" id="firstNameFive" style="width:100%">
+                </td>
+                <td>
+                    <input type="text" id="lastNameFive" style="width:100%">
+                </td>
+                <td>
+                    <input type="text" id="mileOneFive" style="width:100%">
+                </td>
+                <td>
+                    <input type="text" id="mileTwoFive" style="width:100%">
+                </td>
+                <td>
+                    <input type="text" id="totalTimeFive" style="width:100%">
+                </td>
+                <td>
+                    <input type="button"  class="Button" id="Update5" value="Update" onclick="javascript:updateFive();" />
+                    <input type="button"  class="Button" id="Restore5" value="Restore" onclick="javascript:restoreFive();" />
+                    <input type="button"  class="Button" id="Delete5" value="Delete" onclick="javascript:deleteFive();" />
+                </td>
+            </tr>
+        </table>
+    </div>
+
+    <p>
+    </p>
+
+    <div id="tableTwo">
+        <h2>Statistics</h2>
+
+        <table id='Statistics' border="1" style="width:100%">
+
+            <tr>
+                <th class="tableTitle">First Name</th>
+                <th class="tableTitle">Last Name</th>
+                <th class="tableTitle">Split One (Minutes)</th>
+                <th class="tableTitle">Split Two (Minutes)</th>
+                <th class="tableTitle">Total Time</th>
+            </tr>
+
+            <tr>
+                <td id="statFirstNameOne"/>
+            	<td id="statLastNameOne"/> 
+            	<td id="statMileOneOne"/>
+            	<td id="statMileTwoOne"/>
+            	<td id="statTotalTimeOne"/>
+            </tr>
+
+            <tr>
+                <td id="statFirstNameTwo"/>
+            	<td id="statLastNameTwo"/> 
+            	<td id="statMileOneTwo"/>
+            	<td id="statMileTwoTwo"/>
+            	<td id="statTotalTimeTwo"/>
+            </tr>
+
+            <tr>
+                <td id="statFirstNameThree"/>
+            	<td id="statLastNameThree"/> 
+            	<td id="statMileOneThree"/>
+            	<td id="statMileTwoThree"/>
+            	<td id="statTotalTimeThree"/>
+            </tr>
+
+            <tr>
+                <td id="statFirstNameFour"/>
+            	<td id="statLastNameFour"/> 
+            	<td id="statMileOneFour"/>
+            	<td id="statMileTwoFour"/>
+            	<td id="statTotalTimeFour"/>
+            </tr>
+
+            <tr>
+            	<td id="statFirstNameFive"/>
+            	<td id="statLastNameFive"/> 
+            	<td id="statMileOneFive"/>
+            	<td id="statMileTwoFive"/>
+            	<td id="statTotalTimeFive"/>
+                
+            </tr>
+
+        </table>
+    </div>
+</div>
+
+</body>
+
+</html>
